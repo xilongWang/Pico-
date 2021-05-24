@@ -1,0 +1,6 @@
+cmd命令
+adb shell pxrconfigservicetest -p test -j 'pxr.trackingservice.trackingmode,3'
+adb shell setprop persist.picoslam.log 1
+adb reboot
+#adb logcat -c & adb logcat -G 25m & adb logcat | findstr backend:
+adb logcat -c & adb logcat -G 25m & adb logcat | grep backend:
